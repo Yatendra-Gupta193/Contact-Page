@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* SOFTER LIGHT GRADIENT BACKGROUND */
+    background: linear-gradient(135deg, #dff7f4, #9be6dc);
+}
+
+/* CONTAINER */
+.container {
+    width: 900px;
+    max-width: 95%;
+}
+
+/* CARD */
+.card {
+    display: flex;
+    background: #073b4c;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+    transition: 0.3s;
+}
+
+/* LEFT SECTION */
+.left {
+    flex: 1;
+    color: white;
+    padding-right: 40px;
+}
+
+.left h1 {
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    letter-spacing: 0.5px;
+}
+
+.left h1 span {
+    color: #6ad3c7;
+}
+
+.info p {
+    margin-bottom: 16px;
+    font-size: 15px;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+}
+
+.info i {
+    margin-right: 10px;
+    color: #6ad3c7;
+    font-size: 15px;
+}
+
+/* SOCIAL ICONS */
+.social {
+    margin-top: 70px;
+}
+
+.social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 50%;
+    margin-right: 14px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* BRAND COLORS ON HOVER */
+.social a:nth-child(1):hover { /* LinkedIn */
+    background: #0a66c2;
+    transform: translateY(-5px);
+}
+.social a:nth-child(2):hover { /* WhatsApp */
+    background: #25D366;
+    transform: translateY(-5px);
+}
+.social a:nth-child(3):hover { /* Instagram */
+    background: radial-gradient(circle at 30% 107%, 
+                #fdf497 0%, #fdf497 5%, #fd5949 45%, 
+                #d6249f 60%, #285AEB 90%);
+    transform: translateY(-5px);
+}
+
+/* RIGHT SECTION */
+.right {
+    flex: 1;
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+}
+
+/* FORM HEADING */
+.right h2 {
+    text-align: center;
+    color: #0f766e;
+    margin-bottom: 28px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+/* FORM LABELS */
+form label {
+    display: block;
+    font-size: 13.5px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 500;
+}
+
+/* INPUTS */
+form input,
+form textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    margin-bottom: 22px;
+    padding: 8px 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* INPUT FOCUS EFFECT */
+form input:focus,
+form textarea:focus {
+    border-bottom: 2px solid #0f9d8f;
+    box-shadow: 0 2px 0 rgba(15, 157, 143, 0.4);
+}
+
+/* TEXTAREA */
+form textarea {
+    resize: none;
+    height: 90px;
+}
+
+/* SUBMIT BUTTON */
+form button {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, #0f9d8f, #14b8a6);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 18px rgba(15, 157, 143, 0.35);
+}
+
+/* BUTTON HOVER */
+form button:hover {
+    background: linear-gradient(135deg, #0b7f74, #0f9d8f);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(15, 157, 143, 0.45);
+}
+
+/* BUTTON CLICK */
+form button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(15, 157, 143, 0.3);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .left {
+        padding-right: 0;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .social {
+        text-align: center;
+        margin-top: 40px;
+    }
+}
